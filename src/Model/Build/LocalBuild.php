@@ -43,7 +43,7 @@ class LocalBuild extends Build
         } else {
             $cmd = 'mkdir -p %2$s';
             $builder->executeCommand($cmd, $reference, $buildPath);
-            $cmd = 'cp -Rf "%s/*" "%s/"';
+            $cmd = 'cp -Rf "%s/"* "%s/"';
             $builder->executeCommand($cmd, $reference, $buildPath);
         }
 
