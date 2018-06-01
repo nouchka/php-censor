@@ -41,7 +41,7 @@ class LocalBuild extends Build
         if (isset($buildSettings['prefer_symlink']) && $buildSettings['prefer_symlink'] === true) {
             return $this->handleSymlink($builder, $reference, $buildPath);
         } else {
-            $cmd = 'mkdir %2$s';
+            $cmd = 'mkdir -p %2$s';
             $builder->executeCommand($cmd, $reference, $buildPath);
             $cmd = 'cp -Rf "%s" "%s/"';
             $builder->executeCommand($cmd, $reference, $buildPath);
